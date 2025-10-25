@@ -511,7 +511,8 @@ body {
 }
 
 .trending-card {
-    background: var(--surface);
+    background-color: #1e1e2f;
+    color: rgb(211, 206, 233);
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: var(--shadow);
@@ -522,11 +523,25 @@ body {
 .trending-card:hover {
     transform: translateY(-5px);
 }
+/* Grayscale fade for non-hovered cards */
+.trending-slider:hover .trending-card:not(:hover) {
+    filter: grayscale(100%);
+    opacity: 0.6;
+}
+
+/* Hover expansion and glow */
+.trending-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 24px rgba(100, 150, 255, 0.3);
+    background: linear-gradient(to bottom right, #2a0845, #6441a5, #b06ab3);
+    z-index: 2;
+}
+
 
 .trending-type {
     display: inline-block;
     background: var(--accent-light);
-    color: white;
+    color: rgb(211, 206, 233);
     padding: 0.25rem 0.75rem;
     border-radius: 50px;
     font-size: 0.8rem;
@@ -540,7 +555,7 @@ body {
 }
 
 .trending-card p {
-    color: var(--text-light);
+    color: rgb(211, 206, 233);
     font-size: 0.9rem;
     margin-bottom: 1rem;
 }
@@ -548,9 +563,34 @@ body {
 .trending-stats {
     display: flex;
     justify-content: space-between;
-    color: var(--text-light);
+    color: rgb(211, 206, 233);
     font-size: 0.8rem;
 }
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to each card */
+.trending-card {
+    animation: fadeSlideUp 0.6s ease forwards;
+    animation-delay: var(--delay);
+    opacity: 0;
+}
+
+/* Staggered delay for each card */
+.trending-card:nth-child(1) { --delay: 0.2s; }
+.trending-card:nth-child(2) { --delay: 0.4s; }
+.trending-card:nth-child(3) { --delay: 0.6s; }
+.trending-card:nth-child(4) { --delay: 0.8s; }
+
 
 /* USP Section */
 .usp-section {
@@ -728,14 +768,6 @@ body {
         align-items: center;
     }
 }
-
-
-
-
-
-
-
-
 
 /* Add these styles to your existing style.css file */
 
