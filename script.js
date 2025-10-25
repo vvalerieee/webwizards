@@ -127,6 +127,123 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    // ========== FLIP BOOK FUNCTIONALITY ==========
+    function initializeFlipBooks() {
+        const flipBooks = document.querySelectorAll('.flip-book');
+        
+        flipBooks.forEach(book => {
+            const flipIndicator = book.querySelector('.flip-indicator');
+            const pageDots = book.querySelectorAll('.page-dot');
+            const prevBtn = book.querySelector('.prev-btn');
+            const nextBtn = book.querySelector('.next-btn');
+            const pages = book.querySelectorAll('.book-page-content');
+            
+            let currentPage = 1;
+            const totalPages = pages.length;
+            
+            // Flip book functionality
+            flipIndicator.addEventListener('click', function(e) {
+                e.stopPropagation();
+                book.classList.toggle('flipped');
+            });
+            
+            // Page navigation functionality
+            function updatePageDisplay() {
+                // Hide all pages
+                pages.forEach(page => {
+                    page.style.display = 'none';
+                });
+                
+                // Show current page
+                const currentPageElement = book.querySelector(`.page-${currentPage}`);
+                if (currentPageElement) {
+                    currentPageElement.style.display = 'block';
+                }
+                
+                // Update page dots
+                pageDots.forEach(dot => {
+                    dot.classList.remove('active');
+                    if (parseInt(dot.getAttribute('data-page')) === currentPage) {
+                        dot.classList.add('active');
+                    }
+                });
+                
+                // Update button states
+                prevBtn.disabled = currentPage === 1;
+                nextBtn.disabled = currentPage === totalPages;
+                
+                // Update button text for last page
+                if (currentPage === totalPages) {
+                    nextBtn.innerHTML = 'Finish <i class="fas fa-flag-checkered"></i>';
+                } else {
+                    nextBtn.innerHTML = 'Next <i class="fas fa-chevron-right"></i>';
+                }
+            }
+            
+            // Next page
+            nextBtn.addEventListener('click', function() {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    updatePageDisplay();
+                } else {
+                    // Close the book when finished
+                    book.classList.remove('flipped');
+                    currentPage = 1;
+                    updatePageDisplay();
+                }
+            });
+            
+            // Previous page
+            prevBtn.addEventListener('click', function() {
+                if (currentPage > 1) {
+                    currentPage--;
+                    updatePageDisplay();
+                }
+            });
+            
+            // Page dot navigation
+            pageDots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    currentPage = parseInt(this.getAttribute('data-page'));
+                    updatePageDisplay();
+                });
+            });
+            
+            // Close book when clicking on front cover (if flipped)
+            book.addEventListener('click', function(e) {
+                if (book.classList.contains('flipped') && e.target.closest('.book-front')) {
+                    book.classList.remove('flipped');
+                    currentPage = 1;
+                    updatePageDisplay();
+                }
+            });
+            
+            // Initialize page display
+            updatePageDisplay();
+        });
+    }
+
+    // Initialize flip books
+    initializeFlipBooks();
+    
+    // Add some interactive effects for flip books
+    const flipBooks = document.querySelectorAll('.flip-book');
+    
+    flipBooks.forEach(book => {
+        book.addEventListener('mouseenter', function() {
+            if (!this.classList.contains('flipped')) {
+                this.style.transform = 'translateY(-10px)';
+            }
+        });
+        
+        book.addEventListener('mouseleave', function() {
+            if (!this.classList.contains('flipped')) {
+                this.style.transform = 'translateY(0)';
+            }
+        });
+    });
+    // ========== END FLIP BOOK FUNCTIONALITY ==========
     
     // Initialize with some animations
     setTimeout(() => {

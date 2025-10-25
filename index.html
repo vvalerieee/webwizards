@@ -14,7 +14,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="index.html">
-                    <span class="logo-icon">📚</span>
+                    <span class="logo-icon"><img src="C:\Users\valer\Downloads\icons8-book-50.png" alt="Website Logo" width="50" height="50"></span>
                     <span class="logo-text">Read.Learn.Discover</span>
                 </a>
             </div>
@@ -42,122 +42,356 @@
     <!-- Animated Strip Section -->
     <section class="animated-strip">
         <div class="strip-container">
-            <div class="strip-card">🌍 Explore</div>
+            <a href= "explore.html" class="strip-card">🌍 Explore</a>
             <div class="strip-card">📖 Books</div>
             <div class="strip-card">🧠 Articles</div>
-            <div class="strip-card">📚 Dashboard</div>
+            <a href="library.html" class="strip-card">📚 Dashboard</a>
             <div class="strip-card">🎓 Learn</div>
         </div>
     </section>
 
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-background">
-            <div class="constellation"></div>
+<section class="hero" id="home">
+    <div class="hero-background">
+        <!-- Shooting Star Layer -->
+        <div class="shooting-stars">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <div class="hero-content">
-            <h1 class="hero-title">Explore the world of knowledge and stories</h1>
-            <p class="hero-subtitle">A unified platform combining Wikipedia's factual depth with Project Gutenberg's timeless literature</p>
-            <div class="search-container">
-                <div class="search-bar">
-                    <input type="text" placeholder="Search for articles, books, or topics...">
-                    <button class="search-btn">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-                <div class="search-options">
-                    <button class="search-option active">
-                        <span class="option-icon">🧠</span>
-                        <span>Articles</span>
-                    </button>
-                    <button class="search-option">
-                        <span class="option-icon">📖</span>
-                        <span>Books</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
-    <!-- Featured Section -->
-    <section class="featured-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Featured Today</h2>
-                <p>Discover something new every day</p>
+    <div class="hero-content">
+        <h1 class="hero-title">Explore the world of knowledge and stories</h1>
+        <p class="hero-subtitle">A unified platform combining Wikipedia's factual depth with Project Gutenberg's timeless literature</p>
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="text" placeholder="Search for articles, books, or topics...">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
             </div>
-            <div class="featured-grid">
-                <div class="featured-card article-card">
-                    <div class="card-badge">Featured Article</div>
-                    <div class="card-content">
-                        <h3 class="card-title">The Renaissance Period</h3>
-                        <p class="card-description">A period in European history marking the transition from the Middle Ages to modernity, characterized by an effort to revive and surpass the ideas and achievements of classical antiquity.</p>
-                        <div class="card-meta">
-                            <span><i class="far fa-clock"></i> 12 min read</span>
-                            <span><i class="far fa-eye"></i> 4.2k views</span>
-                        </div>
-                        <button class="card-btn">Read Article</button>
-                    </div>
-                </div>
-                <div class="featured-card book-card">
-                    <div class="card-badge">Book of the Day</div>
-                    <div class="card-content">
-                        <h3 class="card-title">Pride and Prejudice</h3>
-                        <p class="card-author">by Jane Austen</p>
-                        <p class="card-description">A romantic novel of manners that depicts the emotional development of protagonist Elizabeth Bennet, who learns the error of making hasty judgments.</p>
-                        <div class="card-meta">
-                            <span><i class="far fa-calendar"></i> 1813</span>
-                            <span><i class="far fa-star"></i> 4.7</span>
-                        </div>
-                        <button class="card-btn">Read Book</button>
-                    </div>
-                </div>
+            <div class="search-options">
+                <button class="search-option active">
+                    <span class="option-icon">🧠</span>
+                    <span>Articles</span>
+                </button>
+                <button class="search-option">
+                    <span class="option-icon">📖</span>
+                    <span>Books</span>
+                </button>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Categories Section -->
-    <section class="categories-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Explore Categories</h2>
-                <p>Browse by topic or genre</p>
-            </div>
-            <div class="categories-grid">
-                <div class="category-card">
-                    <div class="category-icon">🔬</div>
-                    <h3>Science</h3>
-                    <p>1,240 articles • 320 books</p>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon">📚</div>
-                    <h3>Literature</h3>
-                    <p>850 articles • 1,560 books</p>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon">🏛️</div>
-                    <h3>History</h3>
-                    <p>2,150 articles • 890 books</p>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon">🧠</div>
-                    <h3>Philosophy</h3>
-                    <p>680 articles • 450 books</p>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon">💻</div>
-                    <h3>Technology</h3>
-                    <p>1,890 articles • 210 books</p>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon">🎨</div>
-                    <h3>Arts</h3>
-                    <p>1,020 articles • 670 books</p>
-                </div>
-            </div>
+
+   <!-- Featured Flipbook Notebook Style -->
+<section class="featured-section notebook-flipbook">
+  <div class="container">
+    <div class="section-header">
+      <h2>Featured Today</h2>
+      <p>Discover something new every day</p>
+    </div>
+
+    <div class="notebook">
+      <div class="book" id="book">
+        <div class="page front-page">
+          <div class="spine"></div>
+          <h3>The Renaissance Period</h3>
+          <p>A period in European history marking the transition from the Middle Ages to modernity, characterized by revival of classical thought.</p>
+          <button class="page-btn">Read Article</button>
         </div>
-    </section>
+        <div class="page">
+          <div class="spine"></div>
+          <h3>Pride and Prejudice</h3>
+          <p>A romantic novel of manners that depicts Elizabeth Bennet’s emotional development and the theme of judging others.</p>
+          <button class="page-btn">Read Book</button>
+        </div>
+        <div class="page">
+          <div class="spine"></div>
+          <h3>Artificial Intelligence Ethics</h3>
+          <p>Exploring the moral implications of AI and how we can build responsible intelligent systems.</p>
+          <button class="page-btn">Read Article</button>
+        </div>
+        <div class="page back-cover">
+          <div class="spine"></div>
+          <h3>End of Today’s Features</h3>
+          <p>Check back tomorrow for more knowledge and stories!</p>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="prevPage">⟨ Prev</button>
+        <button id="nextPage">Next ⟩</button>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .featured-section {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(135deg, #111827, #1f2937);
+      color: #fff;
+    }
+    .section-header h2 {
+      font-size: 2.2rem;
+      font-family: 'Playfair Display', serif;
+    }
+    .section-header p {
+      font-family: 'Inter', sans-serif;
+      margin-bottom: 2rem;
+      color: #d1d5db;
+    }
+
+    .notebook {
+      perspective: 2000px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .book {
+      width: 600px;
+      height: 360px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 1s ease;
+    }
+
+    .page {
+      width: 100%;
+      height: 100%;
+      background: #f9fafb;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 2rem;
+      transform-origin: left;
+      backface-visibility: hidden;
+      overflow: hidden;
+    }
+
+  
+
+    .page h3 {
+      margin-top: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: #111827;
+    }
+
+    .page p {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.5;
+      color: #374151;
+    }
+
+    .page-btn {
+      margin-top: 1rem;
+      background: #111827;
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .page-btn:hover {
+      background: #2563eb;
+    }
+
+    .page:nth-child(1) { z-index: 4; }
+    .page:nth-child(2) { z-index: 3; }
+    .page:nth-child(3) { z-index: 2; }
+    .page:nth-child(4) { z-index: 1; }
+
+    .controls {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .controls button {
+      background: #374151;
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .controls button:hover {
+      background: #2563eb;
+    }
+
+    @keyframes flipPage {
+      0% { transform: rotateY(0deg) skewY(0deg); }
+      50% { transform: rotateY(-90deg) skewY(3deg); }
+      100% { transform: rotateY(-180deg) skewY(0deg); }
+    }
+  </style>
+
+  <script>
+    (function(){
+      const pages = document.querySelectorAll('.book .page');
+      let current = 0;
+
+      function showPage(index){
+        if(index < 0 || index >= pages.length) return;
+        pages[index].style.animation = 'flipPage 1s forwards ease-in-out';
+      }
+
+      function resetPage(index){
+        if(index < 0 || index >= pages.length) return;
+        pages[index].style.animation = '';
+        pages[index].style.transform = 'rotateY(0deg)';
+      }
+
+      document.getElementById('nextPage').addEventListener('click', ()=>{
+        if(current < pages.length - 1){
+          showPage(current);
+          current++;
+        }
+      });
+
+      document.getElementById('prevPage').addEventListener('click', ()=>{
+        if(current > 0){
+          current--;
+          resetPage(current);
+        }
+      });
+    })();
+  </script>
+</section>
+
+  <!-- Categories Section (3D Rotating Globe) -->
+<section class="categories-section globe-view">
+  <div class="container">
+    <div class="section-header">
+      <h2>Explore Categories</h2>
+      <p>Browse by topic or genre</p>
+    </div>
+
+    <div class="globe-container">
+      <div class="globe" id="globe">
+        <div class="category-tag" style="--lat: 20; --lon: 0;">🔬 Science</div>
+        <div class="category-tag" style="--lat: -10; --lon: 60;">📚 Literature</div>
+        <div class="category-tag" style="--lat: 30; --lon: 120;">🏛️ History</div>
+        <div class="category-tag" style="--lat: -25; --lon: -30;">🧠 Philosophy</div>
+        <div class="category-tag" style="--lat: 40; --lon: -130;">💻 Technology</div>
+        <div class="category-tag" style="--lat: -40; --lon: 150;">🎨 Arts</div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .globe-view {
+      background: radial-gradient(circle at center, #0f172a 0%, #020617 100%);
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1rem;
+      overflow: hidden;
+    }
+
+    .section-header h2 {
+      font-size: 2.2rem;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .section-header p {
+      font-family: 'Inter', sans-serif;
+      color: #cbd5e1;
+      margin-bottom: 2rem;
+    }
+
+    .globe-container {
+      perspective: 1000px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .globe {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #2563eb 0%, #1e3a8a 70%, #0f172a 100%);
+      position: relative;
+      transform-style: preserve-3d;
+      animation: spin 15s linear infinite;
+      box-shadow: inset 0 0 40px rgba(255,255,255,0.1), 0 0 80px rgba(37,99,235,0.4);
+    }
+
+    .category-tag {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform-style: preserve-3d;
+      padding: 0.5rem 1rem;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 20px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #e2e8f0;
+      backdrop-filter: blur(5px);
+      transform: rotateY(calc(var(--lon) * 1deg)) rotateX(calc(var(--lat) * 1deg)) translateZ(150px);
+      transition: transform 0.3s ease;
+    }
+
+    .category-tag:hover {
+      background: rgba(37,99,235,0.8);
+      color: #fff;
+      transform: scale(1.1) rotateY(calc(var(--lon) * 1deg)) rotateX(calc(var(--lat) * 1deg)) translateZ(150px);
+    }
+
+    @keyframes spin {
+      from { transform: rotateY(0deg); }
+      to { transform: rotateY(360deg); }
+    }
+  </style>
+
+  <script>
+    // Optional: mouse drag rotation
+    (function() {
+      const globe = document.getElementById('globe');
+      let isDragging = false, startX, rotation = 0;
+
+      globe.addEventListener('mousedown', e => {
+        isDragging = true;
+        startX = e.clientX;
+      });
+
+      window.addEventListener('mouseup', () => isDragging = false);
+
+      window.addEventListener('mousemove', e => {
+        if (!isDragging) return;
+        const delta = e.clientX - startX;
+        rotation += delta * 0.2;
+        globe.style.animation = 'none';
+        globe.style.transform = `rotateY(${rotation}deg)`;
+        startX = e.clientX;
+      });
+    })();
+  </script>
+</section>
+
+
 
     <!-- Trending Section -->
     <section class="trending-section">
