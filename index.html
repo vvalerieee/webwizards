@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read. Learn. Discover. | Unified Knowledge Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">Read.Learn.Discover</span>
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="explore.html" class="nav-link">Explore</a>
+                <a href="#articles" class="nav-link">Articles</a>
+                <a href="#books" class="nav-link">Books</a>
+                <a href="library.html" class="nav-link">My Library</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="login-btn">Sign In</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="constellation"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Explore the world of knowledge and stories</h1>
+            <p class="hero-subtitle">A unified platform combining Wikipedia's factual depth with Project Gutenberg's timeless literature</p>
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for articles, books, or topics...">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="search-options">
+                    <button class="search-option active">
+                        <span class="option-icon">🧠</span>
+                        <span>Articles</span>
+                    </button>
+                    <button class="search-option">
+                        <span class="option-icon">📖</span>
+                        <span>Books</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Today</h2>
+                <p>Discover something new every day</p>
+            </div>
+            <div class="featured-grid">
+                <div class="featured-card article-card">
+                    <div class="card-badge">Featured Article</div>
+                    <div class="card-content">
+                        <h3 class="card-title">The Renaissance Period</h3>
+                        <p class="card-description">A period in European history marking the transition from the Middle Ages to modernity, characterized by an effort to revive and surpass the ideas and achievements of classical antiquity.</p>
+                        <div class="card-meta">
+                            <span><i class="far fa-clock"></i> 12 min read</span>
+                            <span><i class="far fa-eye"></i> 4.2k views</span>
+                        </div>
+                        <button class="card-btn">Read Article</button>
+                    </div>
+                </div>
+                <div class="featured-card book-card">
+                    <div class="card-badge">Book of the Day</div>
+                    <div class="card-content">
+                        <h3 class="card-title">Pride and Prejudice</h3>
+                        <p class="card-author">by Jane Austen</p>
+                        <p class="card-description">A romantic novel of manners that depicts the emotional development of protagonist Elizabeth Bennet, who learns the error of making hasty judgments.</p>
+                        <div class="card-meta">
+                            <span><i class="far fa-calendar"></i> 1813</span>
+                            <span><i class="far fa-star"></i> 4.7</span>
+                        </div>
+                        <button class="card-btn">Read Book</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Explore Categories</h2>
+                <p>Browse by topic or genre</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">🔬</div>
+                    <h3>Science</h3>
+                    <p>1,240 articles • 320 books</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">📚</div>
+                    <h3>Literature</h3>
+                    <p>850 articles • 1,560 books</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🏛️</div>
+                    <h3>History</h3>
+                    <p>2,150 articles • 890 books</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🧠</div>
+                    <h3>Philosophy</h3>
+                    <p>680 articles • 450 books</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">💻</div>
+                    <h3>Technology</h3>
+                    <p>1,890 articles • 210 books</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🎨</div>
+                    <h3>Arts</h3>
+                    <p>1,020 articles • 670 books</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Section -->
+    <section class="trending-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Trending Now</h2>
+                <p>What others are reading this week</p>
+            </div>
+            <div class="trending-slider">
+                <div class="trending-card">
+                    <div class="trending-type">Article</div>
+                    <h3>Artificial Intelligence Ethics</h3>
+                    <p>Exploring the moral implications of AI development and deployment in society.</p>
+                    <div class="trending-stats">
+                        <span><i class="fas fa-fire"></i> Trending</span>
+                        <span><i class="far fa-clock"></i> 8 min</span>
+                    </div>
+                </div>
+                <div class="trending-card">
+                    <div class="trending-type">Book</div>
+                    <h3>Frankenstein</h3>
+                    <p>Mary Shelley's Gothic novel about creation and responsibility.</p>
+                    <div class="trending-stats">
+                        <span><i class="fas fa-fire"></i> Trending</span>
+                        <span><i class="far fa-star"></i> 4.5</span>
+                    </div>
+                </div>
+                <div class="trending-card">
+                    <div class="trending-type">Article</div>
+                    <h3>Climate Change Solutions</h3>
+                    <p>Innovative approaches to addressing the global climate crisis.</p>
+                    <div class="trending-stats">
+                        <span><i class="fas fa-fire"></i> Trending</span>
+                        <span><i class="far fa-clock"></i> 10 min</span>
+                    </div>
+                </div>
+                <div class="trending-card">
+                    <div class="trending-type">Book</div>
+                    <h3>Moby Dick</h3>
+                    <p>Herman Melville's epic tale of obsession and the sea.</p>
+                    <div class="trending-stats">
+                        <span><i class="fas fa-fire"></i> Trending</span>
+                        <span><i class="far fa-star"></i> 4.3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- USP Section -->
+    <section class="usp-section">
+        <div class="container">
+            <div class="usp-content">
+                <h2>A single destination where you can read facts, explore knowledge, and enjoy timeless literature — beautifully.</h2>
+                <div class="usp-features">
+                    <div class="usp-feature">
+                        <div class="feature-icon">🧠</div>
+                        <h3>Wikipedia's Knowledge</h3>
+                        <p>Access millions of articles with enhanced readability and modern design.</p>
+                    </div>
+                    <div class="usp-feature">
+                        <div class="feature-icon">📖</div>
+                        <h3>Gutenberg's Stories</h3>
+                        <p>Discover thousands of classic books in an immersive reading experience.</p>
+                    </div>
+                    <div class="usp-feature">
+                        <div class="feature-icon">🔗</div>
+                        <h3>Seamless Integration</h3>
+                        <p>Connect related articles and books for deeper understanding.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Read.Learn.Discover</h3>
+                    <p>A unified platform combining the best of Wikipedia and Project Gutenberg for modern readers and learners.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                        <li><a href="#articles">Articles</a></li>
+                        <li><a href="#books">Books</a></li>
+                        <li><a href="library.html">My Library</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Contributors</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Read.Learn.Discover. All knowledge is free, all stories are timeless.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
