@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore | Read. Learn. Discover.</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">Read.Learn.Discover</span>
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="explore.html" class="nav-link active">Explore</a>
+                <a href="#articles" class="nav-link">Articles</a>
+                <a href="#books" class="nav-link">Books</a>
+                <a href="library.html" class="nav-link">My Library</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="login-btn">Sign In</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Explore Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Explore Knowledge & Literature</h1>
+            <p>Discover articles, books, and topics that interest you</p>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-container">
+                <div class="content-tabs">
+                    <button class="tab-btn active" data-tab="mixed">
+                        <span class="tab-icon">🧩</span>
+                        Mixed
+                    </button>
+                    <button class="tab-btn" data-tab="articles">
+                        <span class="tab-icon">🧠</span>
+                        Articles
+                    </button>
+                    <button class="tab-btn" data-tab="books">
+                        <span class="tab-icon">📖</span>
+                        Books
+                    </button>
+                </div>
+                
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label for="category">Category</label>
+                        <select id="category">
+                            <option value="all">All Categories</option>
+                            <option value="science">Science</option>
+                            <option value="literature">Literature</option>
+                            <option value="history">History</option>
+                            <option value="philosophy">Philosophy</option>
+                            <option value="technology">Technology</option>
+                            <option value="arts">Arts</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="sort">Sort By</label>
+                        <select id="sort">
+                            <option value="popular">Most Popular</option>
+                            <option value="new">Newest</option>
+                            <option value="recommended">Recommended</option>
+                            <option value="title">Title A-Z</option>
+                        </select>
+                    </div>
+                    
+                    <div class="search-filter">
+                        <input type="text" placeholder="Search within results...">
+                        <button class="search-icon">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section">
+        <div class="container">
+            <div class="results-header">
+                <h2>Showing 1,247 Results</h2>
+                <div class="view-options">
+                    <button class="view-option active" data-view="grid">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="view-option" data-view="list">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="results-grid" id="resultsContainer">
+                <!-- Mixed content will be loaded here -->
+                <div class="result-card mixed">
+                    <div class="result-type">Article</div>
+                    <div class="result-content">
+                        <h3>Quantum Mechanics Basics</h3>
+                        <p>An introduction to the fundamental principles of quantum theory and its applications in modern physics.</p>
+                        <div class="result-meta">
+                            <span><i class="far fa-clock"></i> 15 min</span>
+                            <span><i class="far fa-eye"></i> 2.1k</span>
+                        </div>
+                        <div class="result-tags">
+                            <span class="tag">Physics</span>
+                            <span class="tag">Science</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="result-card mixed">
+                    <div class="result-type">Book</div>
+                    <div class="result-content">
+                        <h3>1984</h3>
+                        <p class="result-author">by George Orwell</p>
+                        <p>A dystopian social science fiction novel about totalitarian control and surveillance.</p>
+                        <div class="result-meta">
+                            <span><i class="far fa-calendar"></i> 1949</span>
+                            <span><i class="far fa-star"></i> 4.8</span>
+                        </div>
+                        <div class="result-tags">
+                            <span class="tag">Fiction</span>
+                            <span class="tag">Dystopian</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="result-card mixed">
+                    <div class="result-type">Article</div>
+                    <div class="result-content">
+                        <h3>Ancient Roman Architecture</h3>
+                        <p>Exploring the engineering marvels and architectural innovations of ancient Rome.</p>
+                        <div class="result-meta">
+                            <span><i class="far fa-clock"></i> 12 min</span>
+                            <span><i class="far fa-eye"></i> 3.4k</span>
+                        </div>
+                        <div class="result-tags">
+                            <span class="tag">History</span>
+                            <span class="tag">Architecture</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="result-card mixed">
+                    <div class="result-type">Book</div>
+                    <div class="result-content">
+                        <h3>Pride and Prejudice</h3>
+                        <p class="result-author">by Jane Austen</p>
+                        <p>A romantic novel of manners that depicts the emotional development of protagonist Elizabeth Bennet.</p>
+                        <div class="result-meta">
+                            <span><i class="far fa-calendar"></i> 1813</span>
+                            <span><i class="far fa-star"></i> 4.7</span>
+                        </div>
+                        <div class="result-tags">
+                            <span class="tag">Romance</span>
+                            <span class="tag">Classic</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="result-card mixed">
+                    <div class="result-type">Article</div>
+                    <div class="result-content">
+                        <h3>Machine Learning Applications</h3>
+                        <p>How machine learning is transforming industries from healthcare to finance.</p>
+                        <div class="result-meta">
+                            <span><i class="far fa-clock"></i> 18 min</span>
+                            <span><i class="far fa-eye"></i> 5.2k</span>
+                        </div>
+                        <div class="result-tags">
+                            <span class="tag">Technology</span>
+                            <span class="tag">AI</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="result-card mixed">
+                    <div class="result-type">Book</div>
+                    <div class="result-content">
+                        <h3>To Kill a Mockingbird</h3>
+                        <p class="result-author">by Harper Lee</p>
+                        <p>A novel exploring racial inequality and moral growth through the eyes of a young girl.</p>
+                        <div class="result-meta">
+                            <span><i class="far fa-calendar"></i> 1960</span>
+                            <span><i class="far fa-star"></i> 4.9</span>
+                        </div>
+                        <div class="result-tags">
+                            <span class="tag">Fiction</span>
+                            <span class="tag">Classic</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="load-more">
+                <button class="load-more-btn">Load More Results</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Read.Learn.Discover</h3>
+                    <p>A unified platform combining the best of Wikipedia and Project Gutenberg for modern readers and learners.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                        <li><a href="#articles">Articles</a></li>
+                        <li><a href="#books">Books</a></li>
+                        <li><a href="library.html">My Library</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Contributors</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Read.Learn.Discover. All knowledge is free, all stories are timeless.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="explore.js"></script>
+</body>
+</html>

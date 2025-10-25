@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library | Read. Learn. Discover.</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">Read.Learn.Discover</span>
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="explore.html" class="nav-link">Explore</a>
+                <a href="#articles" class="nav-link">Articles</a>
+                <a href="#books" class="nav-link">Books</a>
+                <a href="library.html" class="nav-link active">My Library</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="login-btn">Sign In</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Library Header -->
+    <section class="page-header library-header">
+        <div class="container">
+            <div class="library-stats">
+                <div class="stat-card">
+                    <div class="stat-number">47</div>
+                    <div class="stat-label">Saved Items</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">In Progress</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">28</div>
+                    <div class="stat-label">Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">15h</div>
+                    <div class="stat-label">Reading Time</div>
+                </div>
+            </div>
+            <h1>My Personal Library</h1>
+            <p>Your saved articles, books, and reading progress</p>
+        </div>
+    </section>
+
+    <!-- Library Tabs -->
+    <section class="library-tabs">
+        <div class="container">
+            <div class="tabs-container">
+                <button class="library-tab active" data-tab="saved">
+                    <i class="fas fa-bookmark"></i>
+                    Saved Items
+                </button>
+                <button class="library-tab" data-tab="reading">
+                    <i class="fas fa-book-open"></i>
+                    Currently Reading
+                </button>
+                <button class="library-tab" data-tab="completed">
+                    <i class="fas fa-check-circle"></i>
+                    Completed
+                </button>
+                <button class="library-tab" data-tab="highlights">
+                    <i class="fas fa-highlighter"></i>
+                    Highlights & Notes
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Library Content -->
+    <section class="library-content">
+        <div class="container">
+            <div class="library-grid" id="libraryContainer">
+                <!-- Saved Items (Default View) -->
+                <div class="library-item saved">
+                    <div class="item-type">Article</div>
+                    <div class="item-content">
+                        <h3>The History of Computing</h3>
+                        <p>From ancient calculating devices to modern quantum computers.</p>
+                        <div class="item-meta">
+                            <span><i class="far fa-clock"></i> 20 min</span>
+                            <span><i class="far fa-calendar"></i> Saved 3 days ago</span>
+                        </div>
+                        <div class="item-actions">
+                            <button class="action-btn read-btn">Continue Reading</button>
+                            <button class="action-btn remove-btn">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="library-item saved">
+                    <div class="item-type">Book</div>
+                    <div class="item-content">
+                        <h3>Brave New World</h3>
+                        <p class="item-author">by Aldous Huxley</p>
+                        <p>A dystopian novel about a technologically advanced future society.</p>
+                        <div class="item-meta">
+                            <span><i class="far fa-star"></i> 4.6</span>
+                            <span><i class="far fa-calendar"></i> Saved 1 week ago</span>
+                        </div>
+                        <div class="item-actions">
+                            <button class="action-btn read-btn">Start Reading</button>
+                            <button class="action-btn remove-btn">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="library-item saved">
+                    <div class="item-type">Article</div>
+                    <div class="item-content">
+                        <h3>Renewable Energy Sources</h3>
+                        <p>Comparative analysis of solar, wind, and hydroelectric power generation.</p>
+                        <div class="item-meta">
+                            <span><i class="far fa-clock"></i> 15 min</span>
+                            <span><i class="far fa-calendar"></i> Saved 2 weeks ago</span>
+                        </div>
+                        <div class="item-actions">
+                            <button class="action-btn read-btn">Read Article</button>
+                            <button class="action-btn remove-btn">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Currently Reading -->
+                <div class="library-item reading">
+                    <div class="item-type">Book</div>
+                    <div class="item-content">
+                        <h3>Moby Dick</h3>
+                        <p class="item-author">by Herman Melville</p>
+                        <p>The epic tale of Captain Ahab's obsessive quest for revenge.</p>
+                        <div class="reading-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 45%"></div>
+                            </div>
+                            <span class="progress-text">45% completed</span>
+                        </div>
+                        <div class="item-actions">
+                            <button class="action-btn read-btn">Continue</button>
+                            <button class="action-btn pause-btn">
+                                <i class="fas fa-pause"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Completed -->
+                <div class="library-item completed">
+                    <div class="item-type">Article</div>
+                    <div class="item-content">
+                        <h3>Ancient Greek Philosophy</h3>
+                        <p>The foundations of Western philosophical thought from Socrates to Aristotle.</p>
+                        <div class="completion-date">
+                            <i class="far fa-check-circle"></i>
+                            Completed on Oct 12, 2023
+                        </div>
+                        <div class="item-actions">
+                            <button class="action-btn read-btn">Review</button>
+                            <button class="action-btn highlight-btn">
+                                <i class="fas fa-highlighter"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <div class="empty-icon">📚</div>
+                <h3>No items found</h3>
+                <p>You haven't saved any items to this section yet.</p>
+                <button class="explore-btn" onclick="window.location.href='explore.html'">
+                    Explore Content
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reading Stats -->
+    <section class="reading-stats">
+        <div class="container">
+            <h2>Your Reading Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-chart">
+                    <h3>Reading Time Distribution</h3>
+                    <div class="chart-placeholder">
+                        <div class="chart-bar" style="height: 80%">
+                            <span>Articles</span>
+                        </div>
+                        <div class="chart-bar" style="height: 60%">
+                            <span>Books</span>
+                        </div>
+                        <div class="chart-bar" style="height: 40%">
+                            <span>Research</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-categories">
+                    <h3>Top Categories</h3>
+                    <div class="category-list">
+                        <div class="category-item">
+                            <span class="category-name">Science</span>
+                            <span class="category-count">12 items</span>
+                        </div>
+                        <div class="category-item">
+                            <span class="category-name">Literature</span>
+                            <span class="category-count">8 items</span>
+                        </div>
+                        <div class="category-item">
+                            <span class="category-name">History</span>
+                            <span class="category-count">6 items</span>
+                        </div>
+                        <div class="category-item">
+                            <span class="category-name">Technology</span>
+                            <span class="category-count">5 items</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Read.Learn.Discover</h3>
+                    <p>A unified platform combining the best of Wikipedia and Project Gutenberg for modern readers and learners.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                        <li><a href="#articles">Articles</a></li>
+                        <li><a href="#books">Books</a></li>
+                        <li><a href="library.html">My Library</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Contributors</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Read.Learn.Discover. All knowledge is free,
